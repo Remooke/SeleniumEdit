@@ -15,6 +15,8 @@ public class InsuranceTravelPage {
     public WebElement arrangeOnlineProgram;
     @FindBy(xpath="//*[contains(text(), 'Оформить на сайте')]")
     public WebElement arrangeOnWebProgram;
+    @FindBy (xpath="//h1[contains(text(), 'Страхование путешественников')]")
+    public WebElement title;
 
     public  InsuranceTravelPage(WebDriver driver){
         PageFactory.initElements(driver, this);

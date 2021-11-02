@@ -1,5 +1,6 @@
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,6 +18,7 @@ import java.time.Duration;
 public class firstSeleniumTest extends BaseTest{
 
     @Test
+    @Ignore
     public void testSberbank() {
         driver.get(baseUrl);
         driver.findElement(By.xpath("//li[contains(@class,'kitt-top-menu__item')]/*[contains(text(), 'Страхование')]")).click();
