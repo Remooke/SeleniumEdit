@@ -1,15 +1,20 @@
+package steps;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
-import java.time.Duration;
+import util.TestProperties;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-public class BaseTest {
+public class BaseSteps {
+    public static WebDriver getDriver() {
+        return driver;
+    }
+
     protected static WebDriver driver;
     protected static String baseUrl;
     public static Properties properties = TestProperties.getInstance().getProperties();
@@ -26,11 +31,12 @@ public class BaseTest {
         baseUrl = properties.getProperty("app.url");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
+        driver.get(baseUrl);
     }
 
     @AfterClass
     public static void tearDown() throws Exception {
-       //driver.quit();
+       driver.quit();
     }
 
     protected void fillField(By locator, String value) {

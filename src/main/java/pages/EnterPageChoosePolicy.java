@@ -19,7 +19,7 @@ public class EnterPageChoosePolicy {
 
     public  EnterPageChoosePolicy(WebDriver driver){
         PageFactory.initElements(driver, this);
-        Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        Wait<WebDriver> wait = new WebDriverWait(driver, (10));
         wait.until(ExpectedConditions.visibilityOf(chooseProgramPolicy));
         wait.until(ExpectedConditions.elementToBeClickable(sendButton1));
     }

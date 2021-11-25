@@ -20,7 +20,7 @@ public class InsuranceTravelPage {
 
     public  InsuranceTravelPage(WebDriver driver){
         PageFactory.initElements(driver, this);
-        Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        Wait<WebDriver> wait = new WebDriverWait(driver, (10));
         wait.until(ExpectedConditions.visibilityOf(arrangeOnlineProgram));
         wait.until(ExpectedConditions.visibilityOf(arrangeOnWebProgram));
     }

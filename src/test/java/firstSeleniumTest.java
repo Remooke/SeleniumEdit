@@ -1,4 +1,4 @@
-
+/*
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -14,7 +14,7 @@ import java.time.Duration;
  * Практическое задание 1
  */
 
-
+/*
 public class firstSeleniumTest extends BaseTest{
 
     @Test
@@ -34,7 +34,7 @@ public class firstSeleniumTest extends BaseTest{
             driver.switchTo().window(winHandle);
         }
         //Wait<WebDriver> wait = new WebDriverWait(driver, 10, 3000);
-        Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        Wait<WebDriver> wait = new WebDriverWait(driver, 10);
         driver.findElement(By.xpath("//h3[contains(text(), 'Минимальная')]")).click();
         wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//button[contains(@class, 'btn btn-primary btn-large')]")))).click();
         //driver.findElement(By.xpath("//button[contains(@class, 'btn btn-primary btn-large')]")).click();
@@ -84,4 +84,4 @@ public class firstSeleniumTest extends BaseTest{
 
 
 
-}
+}*/
