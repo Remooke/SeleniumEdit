@@ -1,12 +1,11 @@
 import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import pages.*;
 
 
 public class MyRefactoringTest extends BaseTest{
-    @Test
+
+ @Test
     public void newInsuranceTest(){
         driver.get(baseUrl);
        MainPage mainPage = new MainPage(driver);
@@ -25,6 +24,7 @@ public class MyRefactoringTest extends BaseTest{
         new EnterPageChoosePolicy(driver).sendButton1.click();
 
         EnterPageArrangePolicy enterPageArrangePolicy = new EnterPageArrangePolicy(driver);
+        //Заполнение значений
         enterPageArrangePolicy.fillField("Фамилия Застрахованного", "Иванов");
         enterPageArrangePolicy.fillField("Имя Застрахованного", "Иван");
         enterPageArrangePolicy.fillField("Дата рождения Застрахованного", "24.10.1995");
@@ -39,7 +39,7 @@ public class MyRefactoringTest extends BaseTest{
         enterPageArrangePolicy.fillField("Кем выдан", "Кем-то");
         enterPageArrangePolicy.buttonNext.click();
 
-
+        //Проверка значений
         Assert.assertEquals("Иванов",enterPageArrangePolicy.getFillField("Фамилия Застрахованного"));
         Assert.assertEquals("Иван",enterPageArrangePolicy.getFillField("Имя Застрахованного"));
         Assert.assertEquals("24.10.1995",enterPageArrangePolicy.getFillField("Дата рождения Застрахованного"));
@@ -51,6 +51,7 @@ public class MyRefactoringTest extends BaseTest{
         Assert.assertEquals("123456",enterPageArrangePolicy.getFillField("Номер паспорта"));
         Assert.assertEquals("24.10.2018",enterPageArrangePolicy.getFillField("Дата выдачи"));
         Assert.assertEquals("Кем-то",enterPageArrangePolicy.getFillField("Кем выдан"));
+        //Проверка ошибок
         enterPageArrangePolicy.checkFieldErrorMessage("При заполнении данных произошла ошибка");
         enterPageArrangePolicy.checkFieldErrorMessage("Поле не заполнено.","Поле не заполнено." );
 
