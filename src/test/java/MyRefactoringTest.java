@@ -1,4 +1,5 @@
-import org.junit.Assert;
+/*import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import pages.*;
 
@@ -6,6 +7,7 @@ import pages.*;
 public class MyRefactoringTest extends BaseTest{
 
  @Test
+ @Ignore
     public void newInsuranceTest(){
         driver.get(baseUrl);
        MainPage mainPage = new MainPage(driver);
@@ -53,7 +55,8 @@ public class MyRefactoringTest extends BaseTest{
         Assert.assertEquals("Кем-то",enterPageArrangePolicy.getFillField("Кем выдан"));
         //Проверка ошибок
         enterPageArrangePolicy.checkFieldErrorMessage("При заполнении данных произошла ошибка");
-        enterPageArrangePolicy.checkFieldErrorMessage("Поле не заполнено.","Поле не заполнено." );
+        enterPageArrangePolicy.checkFieldErrorMessage("Поле не заполнено.","Поле не заполнено.");
 
     }
 }
+*/

@@ -1,4 +1,4 @@
-import org.junit.Test;
+/*import org.junit.Test;
 import ru.yandex.qatools.allure.annotations.Title;
 import steps.*;
 
@@ -46,3 +46,4 @@ public class MyTestForAllureReportTest extends BaseSteps {
 
 
 }
+*/

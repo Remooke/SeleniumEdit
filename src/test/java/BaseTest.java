@@ -1,4 +1,4 @@
-import org.junit.AfterClass;
+/*import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -37,4 +37,4 @@ public class BaseTest {
         driver.findElement(locator).clear();
         driver.findElement(locator).sendKeys(value);
     }
-}
+}*/

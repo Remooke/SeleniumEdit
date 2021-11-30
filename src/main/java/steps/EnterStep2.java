@@ -7,10 +7,10 @@ import java.util.HashMap;
 
 import static org.junit.Assert.assertTrue;
 
-public class EnterStep2 extends BaseSteps{
+public class EnterStep2 {
     @Step("И заполняет данные")
     public void stepFillField(String field,String value){
-         new EnterPageArrangePolicy(driver).fillField(field,value);
+         new EnterPageArrangePolicy(BaseSteps.getDriver()).fillField(field,value);
     }
 
     @Step("заполняются поля:")
@@ -49,7 +49,6 @@ public class EnterStep2 extends BaseSteps{
     public void getError2(String errorSearch, String errorMessage){
         new EnterPageArrangePolicy(BaseSteps.getDriver()).checkFieldErrorMessage(errorSearch,errorMessage);
     }
-
 
 
 

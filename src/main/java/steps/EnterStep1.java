@@ -3,10 +3,13 @@ package steps;
 import io.qameta.allure.Step;
 import pages.EnterPageChoosePolicy;
 
-public class EnterStep1 extends BaseSteps{
+public class EnterStep1 {
     @Step("И выбирает минимальную программу")
     public void enterPage1(){
-        new EnterPageChoosePolicy(driver).chooseProgramPolicy.click();
-        new EnterPageChoosePolicy(driver).sendButton1.click();
+        for(String winHandle : BaseSteps.getDriver().getWindowHandles()){
+            BaseSteps.getDriver().switchTo().window(winHandle);
+        }
+        new EnterPageChoosePolicy(BaseSteps.getDriver()).chooseProgramPolicy.click();
+        new EnterPageChoosePolicy(BaseSteps.getDriver()).sendButton1.click();
     }
 }
